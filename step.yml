@@ -3,7 +3,7 @@ title: |-
 summary: |
   mobsfscan is a static analysis tool (SAST) that can find insecure code patterns in your Android and iOS source code. Supports Java, Kotlin, Android XML, Swift and Objective C Code. mobsfscan uses MobSF static analysis rules and is powered by semgrep and libsast pattern matcher.
 description: |
-  TODO: configuration information and troubleshooting information for the Step.
+  Configuration information and troubleshooting information are available on the mobsfscan repository at https://github.com/MobSF/mobsfscan
 website: https://github.com/OhMyApp/bitrise-step-mobsfscan
 source_code_url: https://github.com/OhMyApp/bitrise-step-mobsfscan
 support_url: https://github.com/OhMyApp/bitrise-step-mobsfscan/issues
