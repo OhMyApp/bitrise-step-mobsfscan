@@ -61,6 +61,60 @@ toolkit:
 
 
 inputs:
+  - project_path: "."
+    opts:
+      title: "Path to the project"
+      is_required: true
   - report_file_path: $BITRISE_DEPLOY_DIR/mobsfscan-report.txt
     opts:
       title: "Path to save the report"
+      is_required: false
+  - output_format: "txt"
+    opts:
+      title: Output format
+      is_required: false
+      value_options:
+      - "txt"
+      - "json"
+      - "sarif"
+      - "sonarqube"
+      - "html"
+  - project_type: "auto"
+    opts:
+      title: Project type
+      summary: Force Android or iOS rules explicitly
+      is_required: false
+      value_options:
+      - "auto"
+      - "android"
+      - "ios"
+  - config_file: ""
+    opts:
+      title: Configuration file
+      summary: Location to .mobsf config file
+      is_required: false
+  - multiprocessing: "default"
+    opts:
+      title: Multiprocessing
+      summary: Specify multiprocessing strategy
+      is_required: false
+      value_options:
+      - "default"
+      - "billiard"
+      - "thread"
+  - fail_on_warning: "no"
+    opts:
+      title: Fail on warning
+      summary: non zero exit code on warning
+      is_required: false
+      value_options:
+      - "yes"
+      - "no"
+  - no_fail: "yes"
+    opts:
+      title: Step never fails
+      summary: Force zero exit code, takes precedence over fail_on_warning option
+      is_required: false
+      value_options:
+      - "yes"
+      - "no"
