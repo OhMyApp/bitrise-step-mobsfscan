@@ -11,15 +11,13 @@ mobsfscan is compliant with LGPL-3.0, meaning you can use this tool in your proj
 
 ## Usage
 
-If you want to use this step in your project's `bitrise.yml`:
-
-Reference it in your `bitrise.yml` with the `git::https://github.com/OhMyApp/bitrise-step-mobsfscan.git@main` step reference style:
+To use this step in your workflow you just have to manually add this step in your `bitrise.yml`:
 
 ```
-- git::https://github.com/OhMyApp/bitrise-step-mobsfscan.git@main:
-   title: MobSFScan
-   inputs:
-   - project_path: "."
+ - git::https://github.com/OhMyApp/bitrise-step-mobsfscan.git@main:
+     title: MobSFScan
+     inputs:
+     - project_path: "."
 ```
 
-Check `step.yml` for other optional inputs.
+You can edit other inputs from the side panel in the UI editor.
