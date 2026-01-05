@@ -11,7 +11,20 @@ workflows:
   test:
     steps:
     - path::./:
-        title: Step Test
-        run_if: true
+        title: Run step
         inputs:
-        - project_path: "."
+        - project_path: "./tests/project-ios"
+    - script:
+        title: Check report
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -e
+            reportFile="${BITRISE_DEPLOY_DIR}/mobsfscan-report.txt"
+
+            if [[ -s "$reportFile" ]]; then
+                echo "✅ The report '$reportFile' has been successfully generated."
+            else
+                echo "❌ The report '$reportFile' is missing."
+                exit 1
+            fi
