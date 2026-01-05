@@ -28,3 +28,11 @@ workflows:
                 echo "❌ The report '$reportFile' is missing."
                 exit 1
             fi
+  audit-this-step:
+    steps:
+    - script:
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -ex
+            stepman audit --step-yml ./step.yml
