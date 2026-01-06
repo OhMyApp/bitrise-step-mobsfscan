@@ -2,7 +2,7 @@
 
 mobsfscan is a static analysis tool (SAST) that can find insecure code patterns in your Android and iOS source code. Supports Java, Kotlin, Android XML, Swift and Objective C Code.
 
-mobsfscan uses MobSF static analysis rules and is powered by semgrep and libsast pattern matcher.
+mobsfscan uses [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF) static analysis rules and is powered by semgrep and libsast pattern matcher.
 
 Configuration information and troubleshooting information are available on the mobsfscan repository at https://github.com/MobSF/mobsfscan
 
