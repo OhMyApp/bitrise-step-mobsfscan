@@ -1,4 +1,4 @@
-# MobSFScan
+# MobSFScan - Bitrise step
 
 [MobSFScan](https://github.com/MobSF/mobsfscan) is a static analysis tool (SAST) that can find insecure code patterns in your Android and iOS source code.  
 Supports Java, Kotlin, Android XML, Swift and Objective-C Code.  
