@@ -47,11 +47,17 @@ security_audit:
   - deploy-to-bitrise-io@2: {}
 ```
 
+<img src="assets/workflow_security_audit.png" alt="preview workflow security_audit" width="300">
+
 ### Configure options
 
-Configuration information is available in the [MobSFScan repository](https://github.com/MobSF/mobsfscan).
+Once the step is added in your workflow, the UI editor will help you to customize the options:
+
+<img src="assets/step_ui.png" alt="Bitrise UI step" width="500">
 
 You will be able to:
-- ignore some rules
 - choose the report format (txt, json, sonarqube, sarif, html)
+- ignore some rules with a config file
 - choose severity level if you wish to break the CI
+
+All details are available at the [MobSFScan repository](https://github.com/MobSF/mobsfscan).
