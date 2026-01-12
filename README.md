@@ -61,3 +61,36 @@ You will be able to:
 - choose severity level if you wish to break the CI
 
 All details are available at the [MobSFScan repository](https://github.com/MobSF/mobsfscan).
+
+### Output sample
+
+With a json format:
+
+```json
+{
+    "errors": [],
+    "mobsfscan_version": "0.4.5",
+    "results": {
+        "ios_cert_pinning": {
+            "metadata": {
+                "cwe": "CWE-295: Improper Certificate Validation",
+                "description": "This app does not have Certificate Pinning implemented in code.",
+                "masvs": "MSTG-NETWORK-4",
+                "owasp-mobile": "M3: Insecure Communication",
+                "reference": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05g-Testing-Network-Communication.md#testing-custom-certificate-stores-and-certificate-pinning-mstg-network-4",
+                "severity": "INFO"
+            }
+        },
+        "ios_custom_keyboard_disabled": {
+            "metadata": {
+                "cwe": "CWE-919: Weaknesses in Mobile Applications",
+                "description": "This app does not have custom keyboards disabled.",
+                "masvs": "MSTG-PLATFORM-11",
+                "owasp-mobile": "M1: Improper Platform Usage",
+                "reference": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x06h-Testing-Platform-Interaction.md#app-extensions",
+                "severity": "INFO"
+            }
+        }
+    }
+}
+```
