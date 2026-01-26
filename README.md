@@ -4,7 +4,7 @@
 Supports Java, Kotlin, Android XML, Swift and Objective-C Code.  
 It uses [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF) static analysis rules.
 
-This [Bitrise](https://bitrise.io/) step will:
+This approved [Bitrise step](https://bitrise.io/integrations/steps/mobsfscan) will:
 - run MobSFScan to audit your mobile app
 - generate a report 
 
@@ -14,6 +14,21 @@ MobSFScan is compliant with LGPL-3.0, meaning you can use this tool in your proj
 
 ### Basic integration
 
+Open the UI editor
+- Select your workflow
+- Click on `add a step`
+- Search for `MobSFScan`
+- Select this step
+- Customize the inputs in the panel
+
+Or open `bitrise.yml` and add this step:
+```yml
+- mobsfscan@1: {}
+```
+
+### Repo integration
+
+If you want to target this repository (to use a specific branch for example).
 Open `bitrise.yml` to edit your workflow:
 1. Add a step to reference this repository.  
 Later you can customize some options from the side panel in the UI editor.
@@ -34,7 +49,7 @@ security_audit:
   - activate-ssh-key@4:
       run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
   - git-clone@8.4: {}
-  - git::https://github.com/OhMyApp/bitrise-step-mobsfscan.git@main:
+  - mobsfscan@1:
       title: 'MobSFScan'
       inputs:
       - project_path: "."
